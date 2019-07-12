@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Primary Schools in Dhaka</title>
+    <br>
+    <br>
+    
+    <br>
+    <br>
+
+    <script>
+        function fn1()
+        {
+            var rd1 = document.getElementById("rd1");
+            var rd2 = document.getElementById("rd2");
+            var url1 = "http://127.0.0.1:8000/home/login";
+            var url2 = "http://127.0.0.1:8000/home/visitor";
+
+            if(rd1.checked==true)
+                window.open(url1);
+            else if(rd2.checked==true)
+                window.open(url2);
+            else
+                alert("Please select one to continue.");
+        }
+
+    </script>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend><h3>Continue as:</h3></legend>
+            <input id="rd1" type="radio" name="user" value="admin">Admin<br>
+            <input id="rd2" type="radio" name="user" value="visitor">Visitor<br>
+            <br>
+            <input onclick="fn1()" id="btn1" type="submit" value="Continue">
+        </fieldset>
+    </form>
+
+</body>
+</html>

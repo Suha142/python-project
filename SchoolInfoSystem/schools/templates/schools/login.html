@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,20 +92,37 @@
 </head>
 
 <body>
-
     <div class="loginbox">
         <img src="user.png" class="avatar">
         <h1>Login Here</h1>
         <p>Username:</p>
-        <input type="text" name="" placeholder="Enter Username">
+        <input type="text" name="" id="username" placeholder="Enter Username">
         <p>Password:</p>
-        <input type="password" name="" placeholder="Enter Password"><br><br>
-        <a href="http://127.0.0.1:8000/main"><input type="submit" value="Login"></a>
-
+        <input type="password" name="" id="password" placeholder="Enter Password"><br><br>
+        <input type="submit" value="Login" id="submit" onclick="validate()">
     </div>
 
-
-
+    <script>
+        var attempt = 3;
+        function validate(){
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if ( (username == "Miftah" && password == "miftah") || (username == "Amrin" && password == "amrin")){
+        window.location = "main";
+        return false;
+        }
+        else{
+        attempt --;
+        alert("You have left "+attempt+" attempt;");
+        if( attempt == 0){
+        document.getElementById("username").disabled = true;
+        document.getElementById("password").disabled = true;
+        document.getElementById("submit").disabled = true;
+        return false;
+        }
+        }
+        }
+    </script>
 
 </body>
 </html>
