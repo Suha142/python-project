@@ -9,9 +9,7 @@ def visitor(request):
     return render(request, 'schools/visitor.html')
 def login(request):
     admins = Admin.objects.all()
-    context = {
-        'admins' : admins ,
-    }
+    context = {'admins' : admins }
     return render(request, 'schools/login.html', context)
 def main(request):
     y = Places.objects.all()
