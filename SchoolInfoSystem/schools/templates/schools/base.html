@@ -1,0 +1,57 @@
+{% load static%}
+<html>
+<head>
+    <title>school list in dhaka</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'schools/CSS/style.css' %}">
+</head>
+<body>
+
+    <div class="topnav">
+      <button class="tablinks" onclick="openpage(event, 'homep')">Home</button>
+      <button class="tablinks" onclick="openpage(event, 'about')">About</button>
+      <button class="tablinks" onclick="openpage(event, 'contact')">Contact</button>
+      <button class="tablinks" onclick="openpage(event, 'admin')">Admin Panel</button>
+      <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <ul class="sidenav">
+      <li><p class="active">Places</p></li>
+      <li><button class="tablinks" onclick="openpage(event, 'Farmgate')">Farmgate</button></li>
+      <li><button class="tablinks" onclick="openpage(event, 'Mohammadpur')">Mohammadpur</button></li>
+      <li><button class="tablinks" onclick="openpage(event, 'Dhanmondi')">Dhanmondi</button></li>
+      <li><button class="tablinks" onclick="openpage(event, 'Gulshan')">Gulshan</button></li>
+        <li><button class="tablinks" onclick="openpage(event, 'Bonani')">Bonani</button></li>
+        <li><button class="tablinks" onclick="openpage(event, 'Motijheel')">Motijheel</button></li>
+        <li><button class="tablinks" onclick="openpage(event, 'Wari')">Wari</button></li>
+        <li><button class="tablinks" onclick="openpage(event, 'Mirpur')">Mirpur</button></li>
+        <li><button class="tablinks" onclick="openpage(event, 'Uttara')">Uttara</button></li>
+        <li><button class="tablinks" onclick="openpage(event, 'Bashaboo')">Bashaboo</button></li>
+    </ul>
+
+    {% block body %}
+    {% endblock %}
+
+    <script>
+    function openpage(evt, placeName) {
+      var i, content, tablinks;
+      content = document.getElementsByClassName("content");
+      for (i = 0; i < content.length; i++) {
+        content[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(placeName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    </script>
+
+</body>
+</html>

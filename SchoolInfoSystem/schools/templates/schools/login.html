@@ -9,7 +9,7 @@
         body{
             margin: 0;
             padding: 0;
-            background: url(Secondary-school.jpg);
+            background: url("{% static 'schools/images/Secondary-school.jpg' %}");
             background-size: cover;
             height: 800px;
             background-attachment: fixed;
@@ -91,7 +91,7 @@
 
 <body>
     <div class="loginbox">
-        <img src="user.png" class="avatar">
+        <img src="{% static 'schools/images/user.png' %}" class="avatar">
         <h1>Login Here</h1>
         <p>Username:</p>
         <input type="text" name="" id="username" placeholder="Enter Username">

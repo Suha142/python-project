@@ -205,3 +205,58 @@ div.content {
             background: #B03A2E;
             color: #000;
         }
+
+  .container input[type=text], input[type=password] {
+  width: 50%;
+  padding: 16px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #808B96;
+  align: center;
+  border-radius:10px;
+  font-size: 18px;
+}
+
+.container input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.clearfix button {
+  background-color: #B03A2E;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+  outline: none;
+  border-radius:10px;
+}
+
+.clearfix button:hover {
+  opacity:1;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #B03A2E;
+}
+
+.cancelbtn, .savebtn {
+  width: 40%;
+}
+
+.container {
+    padding: 10px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 300px) {
+  .cancelbtn, .savebtn {
+     width: 100%;
+  }
+}
