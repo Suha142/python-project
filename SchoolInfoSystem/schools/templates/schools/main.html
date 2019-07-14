@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% load static%}
 <html>
 <head>
     <title>school list in dhaka</title>
@@ -1024,16 +1024,26 @@ div.content {
                   <p><b>Email:</b></p>
                   <p>abc@yahoo.com</p><br><br>
 
-                  <p>Change username<br> <br>  <input type="submit" value="Change"></p>
-                  <p>Change password<br> <br>  <input type="submit" value="Change"></p>
+                  <p>Change username<br> <br>  <input type="submit" value="Change" class="tablinks" onclick="openpage(event, 'cUser')"></p>
+                  <p>Change password<br> <br>  <input type="submit" value="Change" class="tablinks" onclick="openpage(event, '')"></p>
               </div>
               <div class="column">
-                  <p>Add Info<br><br><input type="submit" value="Click here"></p>
-                  <p>Delete Info<br><br><input type="submit" value="Click here"></p>
-                  <p>Update Info<br><br><input type="submit" value="Click here"></p>
+                  <p>Add Info<br><br><input type="submit" value="Click here" class="tablinks" onclick="openpage(event, '')"></p>
+                  <p>Delete Info<br><br><input type="submit" value="Click here" class="tablinks" onclick="openpage(event, '')"></p>
+                  <p>Update Info<br><br><input type="submit" value="Click here" class="tablinks" onclick="openpage(event, '')"></p>
               </div>
         </div>
         <br>
+    </div>
+
+    <div ID="cUser" class="content";style="padding-left:16px">
+        <h2>Admin Panel</h2>
+        <hr style="color: white">
+
+        <p>Change username:</p>
+        <input type="text" name="" id="username" placeholder="Enter Username">
+        <br>
+        <input type="submit" value="Cancel"> <input type="submit" value="Save">
     </div>
 
     <script>
