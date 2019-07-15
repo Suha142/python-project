@@ -1,3 +1,4 @@
+from django.views import generic
 from django.shortcuts import render
 from django.template import loader
 from .models import Admin, Places, Schools

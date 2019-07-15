@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 
 # Create your models here.
 class Admin(models.Model):
@@ -24,6 +25,7 @@ class Schools(models.Model):
     admission_period = models.CharField(max_length=1000)
     last_year_result = models.CharField(max_length=500)
 
+       
     def __str__(self):
         return self.name
 
