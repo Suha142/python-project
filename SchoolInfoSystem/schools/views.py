@@ -7,7 +7,29 @@ from .models import Admin, Places, Schools
 def home(request):
     return render(request, 'schools/home.html')
 def visitor(request):
-    return render(request, 'schools/visitor.html')
+    s = Schools.objects.all()
+    s1 = Schools.objects.filter(location__contains='armg')
+    s2 = Schools.objects.filter(location__contains='hammadpur')
+    s3 = Schools.objects.filter(location__contains='anmondi')
+    s4 = Schools.objects.filter(location__contains='ulshan')
+    s5 = Schools.objects.filter(location__contains='nani')
+    s6 = Schools.objects.filter(location__contains='tijheel')
+    s7 = Schools.objects.filter(location__contains='ari')
+    s8 = Schools.objects.filter(location__contains='irpur')
+    s9 = Schools.objects.filter(location__contains='ttara')
+    s10 = Schools.objects.filter(location__contains='bo')
+    context = {'all_schools': s,
+               'in_farmgate': s1,
+               'in_mdpur': s2,
+               'in_dhanmondi': s3,
+               'in_gulshan': s4,
+               'in_bonani': s5,
+               'in_motjhl': s6,
+               'in_wari': s7,
+               'in_mirpur': s8,
+               'in_uttara': s9,
+               'in_bashaboo': s10,}
+    return render(request, 'schools/visitor.html', context)
 def login(request):
     return render(request, 'schools/login.html')
 def main(request):
