@@ -51,11 +51,9 @@ ul.sidenav li button:hover:not(.active) {
 }
 
 div.content {
-    margin-top: 20px;
-  margin-left: 25%;
+  margin-left: 20%;
   padding: 1px 16px;
   height: 800px;
-  position: fixed;
 }
 
 @media screen and (max-width: 900px) {
@@ -70,6 +68,9 @@ div.content {
     padding: 15px;
   }
 
+  div.content {margin-left: 0;}
+}
+
 @media screen and (max-width: 400px) {
   ul.sidenav li button {
     text-align: center;
@@ -80,9 +81,6 @@ div.content {
     .topnav {
       overflow: hidden;
       background-color: #808B96;
-      position: fixed;
-      top: 0;
-      width: 100%;
     }
 
     .topnav button {
@@ -158,13 +156,11 @@ div.content {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
-  font-size: 12px;
 }
 
 #list td, #list th {
   border: 1px solid #ddd;
-  padding: 4px;
-  font-size: 12px;
+  padding: 8px;
 }
 
 #list tr:nth-child(even){background-color: black;color: white;}
@@ -172,8 +168,8 @@ div.content {
 #list tr:hover {background-color: #F5B7B1; color: black;}
 
 #list th {
-  padding-top: 10px;
-  padding-bottom: 10px;
+    padding-top: 12px;
+  padding-bottom: 12px;
   text-align: left;
   background-color: #B03A2E;
   color: white;
