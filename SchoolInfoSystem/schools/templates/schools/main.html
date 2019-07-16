@@ -2,37 +2,38 @@
 
 {% block body %}
 
-    <div ID="homep" class="content";style="padding-left:16px">
-      <h2>Schools in Dhaka</h2>
-        <hr style="color: white">
-        <br>
-        <table id="list">
-            <tr>
-                <th></th>
-                <th>Name</th>
-                <th>Location</th>
-                <th>Syllabus & Medium</th>
-                <th>Established</th>
-                <th>Level</th>
-                <th>Admission Period</th>
-                <th>Last Year Result(number of G.P.A 5s)</th>
-            </tr>
 
-            {% for s in all_schools %}
-
+        <div ID="homep" class="content";style="padding-left:16px">
+          <h2>Schools in Dhaka</h2>
+            <hr style="color: white">
+            <br>
+            <table id="list">
                 <tr>
-                    <td>{{ s.id }}</td>
-                    <td>{{ s.name }}</td>
-                    <td>{{ s.location }}</td>
-                    <td>{{ s.syllabus_and_medium }}</td>
-                    <td>{{ s.established }}</td>
-                    <td>{{ s.level }}</td>
-                    <td>{{ s.admission_period }}</td>
-                    <td>{{ s.last_year_result }}</td>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Syllabus & Medium</th>
+                    <th>Established</th>
+                    <th>Level</th>
+                    <th>Admission Period</th>
+                    <th>Last Year Result(number of G.P.A 5s)</th>
                 </tr>
-            {% endfor %}
-        </table>
-    </div>
+
+                {% for s in all_schools %}
+
+                    <tr>
+                        <td>{{ s.id }}</td>
+                        <td>{{ s.name }}</td>
+                        <td>{{ s.location }}</td>
+                        <td>{{ s.syllabus_and_medium }}</td>
+                        <td>{{ s.established }}</td>
+                        <td>{{ s.level }}</td>
+                        <td>{{ s.admission_period }}</td>
+                        <td>{{ s.last_year_result }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
 
     <div ID="Farmgate" class="content";style="padding-left:16px">
       <h2>Primary Schools in Farmgate</h2>
