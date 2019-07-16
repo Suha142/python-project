@@ -3,7 +3,7 @@
 {% block body %}
 
     <div ID="homep" class="content";style="padding-left:16px">
-      <h2>Primary Schools in Farmgate</h2>
+      <h2>Schools in Dhaka</h2>
         <hr style="color: white">
         <br>
         <table id="list">
@@ -17,56 +17,20 @@
                 <th>Admission Period</th>
                 <th>Last Year Result(number of G.P.A 5s)</th>
             </tr>
-            <tr>
-                <td>1.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>2.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>3.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>5.</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+
+            {% for s in all_schools %}
+
+                <tr>
+                    <td>{{ s.id }}</td>
+                    <td>{{ s.name }}</td>
+                    <td>{{ s.location }}</td>
+                    <td>{{ s.syllabus_and_medium }}</td>
+                    <td>{{ s.established }}</td>
+                    <td>{{ s.level }}</td>
+                    <td>{{ s.admission_period }}</td>
+                    <td>{{ s.last_year_result }}</td>
+                </tr>
+            {% endfor %}
         </table>
     </div>
 
@@ -784,11 +748,10 @@
                   <p><b>Email:</b></p>
                   <p>abc@yahoo.com</p><br><br>
 
-                  <p>Change username<br> <br>  <input type="submit" value="Change" class="tablinks" onclick="openpage(event, 'cUser')"></p>
-                  <p>Change password<br> <br>  <input type="submit" value="Change" class="tablinks" onclick="openpage(event, 'cPass')"></p>
+                  <p>Change username and password<br> <br> <a href="http://127.0.0.1:8000/admin/schools/admin/"><input type="submit" value="Change" class="tablinks"></a> </p>
               </div>
               <div class="column">
-                  <p>Add Info<br><br><input type="submit" value="Click here" class="tablinks" onclick="openpage(event, '')"></p>
+                  <p>Add Info<br><br><input type="submit" value="Click here" class="tablinks" onclick= "window.location = 'addSchools'"></p>
                   <p>Delete Info<br><br><input type="submit" value="Click here" class="tablinks" onclick="openpage(event, '')"></p>
                   <p>Update Info<br><br><input type="submit" value="Click here" class="tablinks" onclick="openpage(event, '')"></p>
               </div>

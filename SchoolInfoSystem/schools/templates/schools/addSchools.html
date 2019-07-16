@@ -1,0 +1,22 @@
+{% extends 'schools/base.html' %}
+
+{% block body %}
+<div ID="addSchool" class="content";style="padding-left:16px">
+    <h2>Add Schools</h2>
+    <hr style="color: red">
+    <p>Name:                    <input type="text" name="name" required></p>
+    <p>Location:                <input type="text" name="location" required></p>
+    <p>Syllabus & medium:       <input type="text" name="syllabus_and_medium" required></p>
+    <p>Established:             <input type="text" name="established" required></p>
+    <p>Level:                   <input type="text" name="level" required></p>
+    <p>Admission period:        <input type="text" name="admission_period" required></p>
+    <p>Last year result
+        (number of G.P.A 5s):   <input type="text" name="last_year_result" required></p>
+    <br>
+    <form method="post">
+         {% csrf_token %}
+            <input type="submit" value="Add" name="add">
+    </form><a href="http://127.0.0.1:8000/home/main"><input type="submit" value="Cancel" name="cancel"></a>
+</div>
+
+{% endblock %}
